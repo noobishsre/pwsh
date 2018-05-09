@@ -17,8 +17,9 @@ Function Get-NodeStatus
         results = $rtrnstatus
     }
     #$body = $body | convertto-json
-    $uri = "http://localhost:8000/client_run_returns"
+    $uri = "http://localhost:8000/client_returndata"
     
     Invoke-WebRequest -Uri $uri -Body $body -Method POST
 }
 Get-NodeStatus
+
